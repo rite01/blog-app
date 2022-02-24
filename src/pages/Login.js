@@ -4,6 +4,8 @@ import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 function Login({ setIsAuth }) {
+
+
   let navigate = useNavigate();
 
   const signInWithGoogle = () => {
@@ -13,6 +15,8 @@ function Login({ setIsAuth }) {
       navigate("/");
     });
   };
+
+  
 
   return (
     <div className="loginPage">
