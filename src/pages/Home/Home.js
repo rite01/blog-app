@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
-import { auth, db } from "../firebase-config";
+import { auth, db } from "../../utils/firebase-config";
 
-function Home({ isAuth }) {
+ 
+export function Home({ isAuth }) {
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts");
 
@@ -49,5 +50,3 @@ function Home({ isAuth }) {
     </div>
   );
 }
-
-export default Home;
